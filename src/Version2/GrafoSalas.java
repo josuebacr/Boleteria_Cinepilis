@@ -1,12 +1,12 @@
-
 package Version2;
 
-
 import java.util.ArrayList;
-        
+
 public class GrafoSalas {
+
     private ArrayList<Sala> salas;
 
+    
     public GrafoSalas() {
         salas = new ArrayList<>();
     }
@@ -25,7 +25,9 @@ public class GrafoSalas {
     }
 
     public String mostrarTodasLasSalas() {
-        if (salas.isEmpty()) return "No hay salas registradas.";
+        if (salas.isEmpty()) {
+            return "No hay salas registradas.";
+        }
 
         StringBuilder sb = new StringBuilder();
         for (Sala sala : salas) {
@@ -38,4 +40,4 @@ public class GrafoSalas {
     public ArrayList<Sala> getSalas() {
         return salas;
     }
-    }
+}

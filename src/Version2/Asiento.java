@@ -1,31 +1,44 @@
-public class ListaAsientos {
+
+package Version2;
+
+public class Asiento {
     
-    private int numero;
+      private int numero;
     private boolean reservado;
 
-    public ListaAsientos(int numero) {
+    
+    
+    public Asiento(int numero) {
         this.numero = numero;
-        this.reservado = false; // Por defecto, el asiento está libre
+        this.reservado = false;
     }
 
     public int getNumero() {
         return numero;
     }
 
+    
+    
+    
+    
     public boolean estaReservado() {
         return reservado;
     }
 
     public void reservar() {
-        this.reservado = true;
+        reservado = true;
     }
 
     public void liberar() {
-        this.reservado = false;
+        reservado = false;
     }
+    
+    
 
     @Override
     public String toString() {
         return "Asiento " + numero + (reservado ? " (Reservado)" : " (Disponible)");
     }
+    
+    
 }
