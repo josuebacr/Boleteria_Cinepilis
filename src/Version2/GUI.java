@@ -230,7 +230,7 @@ public class GUI extends javax.swing.JFrame {
     private void btnAgregarSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarSalaActionPerformed
 
         try {
-            String numeroStr = JOptionPane.showInputDialog(this, "Ingrese el número de la sala:");
+            String numeroStr = JOptionPane.showInputDialog(this, "Ingrese el numero de la sala:");
             String cantidadStr = JOptionPane.showInputDialog(this, "Ingrese la cantidad de asientos:");
 
             if (numeroStr == null || cantidadStr == null) {
@@ -258,28 +258,28 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnVerSalasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerSalasActionPerformed
         String resultado = grafoSalas.mostrarTodasLasSalas();
-        JOptionPane.showMessageDialog(this, resultado, "Salas y Cartelera", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, resultado, "Sala y Cartelera", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnVerSalasActionPerformed
 
     private void btnRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarClienteActionPerformed
 
         String nombre = JOptionPane.showInputDialog(this, "Ingrese el nombre del cliente:");
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cédula del cliente:");
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:");
 
         if (nombre != null && cedula != null && !nombre.isEmpty() && !cedula.isEmpty()) {
             listaClientes.agregarCliente(new Cliente(nombre, cedula));
             JOptionPane.showMessageDialog(this, "Cliente registrado exitosamente.");
         } else {
-            JOptionPane.showMessageDialog(this, "Campos inválidos.");
+            JOptionPane.showMessageDialog(this, "Campos invalidos.");
         }
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
     private void btnAgregarPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPeliculaActionPerformed
 
-        String titulo = JOptionPane.showInputDialog(this, "Título de la película:");
-        String genero = JOptionPane.showInputDialog(this, "Género:");
-        String duracionStr = JOptionPane.showInputDialog(this, "Duración (minutos):");
-        String clasificacion = JOptionPane.showInputDialog(this, "Clasificación (Ej: PG-13):");
+        String titulo = JOptionPane.showInputDialog(this, "Titulo de la pelicula:");
+        String genero = JOptionPane.showInputDialog(this, "Genero:");
+        String duracionStr = JOptionPane.showInputDialog(this, "Duracion (minutos):");
+        String clasificacion = JOptionPane.showInputDialog(this, "Clasificacion (Ej: PG-13):");
 
         if (titulo != null && genero != null && duracionStr != null && clasificacion != null) {
             try {
@@ -288,16 +288,16 @@ public class GUI extends javax.swing.JFrame {
                 cartelera.agregarPelicula(pelicula);
 
                 // Puedes asignarla a una sala si deseas
-                String numSalaStr = JOptionPane.showInputDialog(this, "¿A qué sala se asigna esta película?");
+                String numSalaStr = JOptionPane.showInputDialog(this, "¿A qué sala se asigna esta pelicula?");
                 int numSala = Integer.parseInt(numSalaStr);
                 Sala sala = grafoSalas.buscarSala(numSala);
                 if (sala != null) {
                     sala.agregarPelicula(pelicula);
                 }
 
-                JOptionPane.showMessageDialog(this, "Película agregada a la cartelera.");
+                JOptionPane.showMessageDialog(this, "Pelicula agregada a la cartelera.");
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Duración inválida.");
+                JOptionPane.showMessageDialog(this, "Duración invalida.");
             }
         } else {
             JOptionPane.showMessageDialog(this, "Debe llenar todos los campos.");
@@ -312,7 +312,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnRealizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRealizarReservaActionPerformed
 
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cédula del cliente:");
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:");
         Cliente cliente = listaClientes.buscarCliente(cedula);
 
         if (cliente == null) {
@@ -320,7 +320,7 @@ public class GUI extends javax.swing.JFrame {
             return;
         }
 
-        int numSala = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese número de sala:"));
+        int numSala = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese numero de sala:"));
         Sala sala = grafoSalas.buscarSala(numSala);
 
         if (sala == null) {
@@ -331,7 +331,7 @@ public class GUI extends javax.swing.JFrame {
         Pelicula pelicula = sala.getCartelera().pelicula;
         Reserva reserva = new Reserva(cliente, pelicula, sala, 2000); // precio fijo
 
-        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese número de asiento:");
+        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese numero de asiento:");
         int asientoNum = Integer.parseInt(asientoStr);
 
         Asiento asiento = sala.getAsientos().get(asientoNum - 1);
