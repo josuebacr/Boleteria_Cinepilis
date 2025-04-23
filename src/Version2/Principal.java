@@ -1,3 +1,9 @@
+/*
+Proyecto Final Boleteria Cinepilis 
+
+Integrantes : Rodríguez Leiton Pablo Andrés, Barboza Arias Josué Michael, Brenes Valverde Dylan, Abigail Miranda Arias 
+*/
+
 
 package Version2;
 

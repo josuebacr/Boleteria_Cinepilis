@@ -59,8 +59,10 @@ public class ListaClientes {
         while (temp != null) {
             sb.append(temp.cliente.toString()).append("\n");
             temp = temp.siguiente;
+               
         }
         return sb.length() == 0 ? "No hay clientes registrados." : sb.toString();
+     
     }
 
 }

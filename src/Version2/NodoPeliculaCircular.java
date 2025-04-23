@@ -1,4 +1,4 @@
-//uso de las listas doblemente enlazadas circularmente 
+// Nodo para la lista doblemente enlazada circular de peliculas
 
 package Version2;
 

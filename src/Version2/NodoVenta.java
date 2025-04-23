@@ -1,3 +1,5 @@
+// Nodo simple que se usa en la lista de ventas
+
 package Version2;
 
 public class NodoVenta {

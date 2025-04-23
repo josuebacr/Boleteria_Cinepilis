@@ -9,21 +9,22 @@ public class Reserva {
     private Pelicula pelicula;
     private Sala sala;
     private List<Asiento> asientos;
-    private double precio;
+    private double precio; // Precio de cada entrada (se multiplica por la cantidad de asientos)
 
+    
+        // Constructor que recibe el cliente, película, sala y precio por asiento
+    
     public Reserva(Cliente cliente, Pelicula pelicula, Sala sala, double precio) {
         this.cliente = cliente;
         this.pelicula = pelicula;
         this.sala = sala;
         this.precio = precio;
-        this.asientos = new ArrayList<>();
+        this.asientos = new ArrayList<>(); // Se inicializa la lista de asientos vacía
     }
 
-    public void agregarAsiento(Asiento asiento) {
-        asiento.reservar();
-        asientos.add(asiento);
-    }
-
+    
+   // Getters para obtener información de la reserva
+    
     public Cliente getCliente() {
         return cliente;
     }
@@ -39,13 +40,24 @@ public class Reserva {
     public List<Asiento> getAsientos() {
         return asientos;
     }
+    
 
+     //Metodos
+     public void agregarAsiento(Asiento asiento) {
+        asiento.reservar();
+        asientos.add(asiento);
+    }
+    
+    
+     // Método para calcular el total a pagar por la reserva (precio x cantidad de asientos)
     public double getTotal() {
         return precio * asientos.size();
     }
 
+     
+    // Metodo que genera el "recibo" de la reserva con todos los datos del cliente, pelicula, sala y asientos
     public String generarRecibo() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(); // Para construir el texto del recibo
         sb.append("️RECIBO DE RESERVA\n");
         sb.append("Cliente: ").append(cliente.getNombre()).append(" - Cedula: ").append(cliente.getCedula()).append("\n");
         sb.append("Pelicula: ").append(pelicula.getTitulo()).append("\n");
@@ -55,6 +67,6 @@ public class Reserva {
             sb.append(a.getNumero()).append(" ");
         }
         sb.append("\nTotal a pagar: ₡").append(getTotal());
-        return sb.toString();
+        return sb.toString(); // Se devuelve el texto con toda la información
     }
 }

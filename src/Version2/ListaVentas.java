@@ -1,3 +1,6 @@
+// Esta clase guarda todas las ventas realizadas en el cine
+// Utiliza una lista enlazada simple de nodos (NodoVenta)
+
 package Version2;
 
 public class ListaVentas {
@@ -8,19 +11,22 @@ public class ListaVentas {
         cabeza = null;
     }
 
+     // Metodo para agregar una nueva venta
     public void agregarVenta(Venta venta) {
         NodoVenta nuevo = new NodoVenta(venta);
         if (cabeza == null) {
-            cabeza = nuevo;
+            cabeza = nuevo; // Si la lista esta vacia, el nuevo nodo es la cabeza
         } else {
             NodoVenta temp = cabeza;
             while (temp.siguiente != null) {
                 temp = temp.siguiente;
             }
-            temp.siguiente = nuevo;
+            temp.siguiente = nuevo; // Se agrega al final
         }
     }
 
+    // Muestra todas las ventas registradas
+    
     public String mostrarVentas() {
         if (cabeza == null) {
             return "No hay ventas registradas.";

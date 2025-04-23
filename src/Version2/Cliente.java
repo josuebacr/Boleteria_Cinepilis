@@ -20,8 +20,12 @@ public class Cliente {
         return cedula;
     }
 
+    
+     // Este metodo convierte el cliente en un texto fácil de leer
+    // Se usa cuando queremos imprimir la info del cliente
+    
     @Override
     public String toString() {
-        return nombre + " - Cedula: " + cedula;
+        return nombre + " → Cedula: " + cedula;
     }
 }

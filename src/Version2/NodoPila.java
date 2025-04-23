@@ -1,3 +1,5 @@
+// Nodo que se usa dentro de la pila de boletos
+
 package Version2;
 
 public class NodoPila {
