@@ -23,6 +23,7 @@ public class Venta {
     public String generarComprobante() {
         StringBuilder sb = new StringBuilder();
         sb.append(" COMPROBANTE DE VENTA CINEPILIS \n");
+        System.out.println("");
         sb.append("Cliente: ").append(cliente.getNombre()).append(" - Cedula: ").append(cliente.getCedula()).append("\n");
         sb.append("Pelicula: ").append(pelicula.getTitulo()).append("\n");
         sb.append("Sala Numero: ").append(sala.getNumero()).append("\n");
@@ -32,7 +33,9 @@ public class Venta {
         }
         sb.append("\nTotal pagado: ₡").append(total).append("\n");
         
-        sb.append(" Gracias por su compra, que disfrute su pelicula! \n").append("\n");
+         System.out.println("");
+          
+        sb.append(" Gracias por visitar Cinepilis \n").append("\n");
         return sb.toString();
     }
     

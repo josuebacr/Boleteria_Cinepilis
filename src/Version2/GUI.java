@@ -29,6 +29,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jToolBar1 = new javax.swing.JToolBar();
         btnAgregarSala = new javax.swing.JButton();
         btnVerSalas = new javax.swing.JButton();
@@ -47,6 +48,14 @@ public class GUI extends javax.swing.JFrame {
         btnAnularVenta = new javax.swing.JButton();
         lbTitulo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jToolBar5 = new javax.swing.JToolBar();
+        btnVerMatriz = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -187,45 +196,84 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boleto.png"))); // NOI18N
 
+        jToolBar5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jToolBar5.setRollover(true);
+
+        btnVerMatriz.setText("Ver Grafo Salas");
+        btnVerMatriz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerMatrizActionPerformed(evt);
+            }
+        });
+        jToolBar5.add(btnVerMatriz);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boleto.png"))); // NOI18N
+
+        jMenu1.setText("Opciones");
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("Salir");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCheckBoxMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
             .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(lbTitulo)
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1))
+                        .addComponent(lbTitulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addContainerGap(126, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(47, 47, 47))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jToolBar5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbTitulo)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToolBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
-                .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToolBar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToolBar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -267,8 +315,8 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarClienteActionPerformed
 
-        String nombre = JOptionPane.showInputDialog(this, "Ingrese el nombre del cliente:");
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:");
+        String nombre = JOptionPane.showInputDialog(this, "Ingrese el nombre del cliente:", JOptionPane.INFORMATION_MESSAGE);
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:", JOptionPane.INFORMATION_MESSAGE);
 
         if (nombre != null && cedula != null && !nombre.isEmpty() && !cedula.isEmpty()) {
             listaClientes.agregarCliente(new Cliente(nombre, cedula));
@@ -280,10 +328,10 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnAgregarPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPeliculaActionPerformed
 
-        String titulo = JOptionPane.showInputDialog(this, "Titulo de la pelicula:");
-        String genero = JOptionPane.showInputDialog(this, "Genero:");
-        String duracionStr = JOptionPane.showInputDialog(this, "Duracion (minutos):");
-        String clasificacion = JOptionPane.showInputDialog(this, "Clasificacion (Ej: PG-13):");
+        String titulo = JOptionPane.showInputDialog(this, "Titulo de la pelicula:", JOptionPane.INFORMATION_MESSAGE);
+        String genero = JOptionPane.showInputDialog(this, "Genero:", JOptionPane.INFORMATION_MESSAGE);
+        String duracionStr = JOptionPane.showInputDialog(this, "Duracion (minutos):", JOptionPane.INFORMATION_MESSAGE);
+        String clasificacion = JOptionPane.showInputDialog(this, "Clasificacion (Ej:ATP- B - B15 - C):", JOptionPane.INFORMATION_MESSAGE);
 
         if (titulo != null && genero != null && duracionStr != null && clasificacion != null) {
             try {
@@ -292,7 +340,7 @@ public class GUI extends javax.swing.JFrame {
                 cartelera.agregarPelicula(pelicula);
 
                 // Puedes asignarla a una sala si deseas
-                String numSalaStr = JOptionPane.showInputDialog(this, "¿A qué sala se asigna esta pelicula?");
+                String numSalaStr = JOptionPane.showInputDialog(this, "¿A que sala se asigna esta pelicula?", JOptionPane.INFORMATION_MESSAGE);
                 int numSala = Integer.parseInt(numSalaStr);
                 Sala sala = grafoSalas.buscarSala(numSala);
                 if (sala != null) {
@@ -301,7 +349,7 @@ public class GUI extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(this, "Pelicula agregada a la cartelera.");
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Duración invalida.");
+                JOptionPane.showMessageDialog(this, "Duracion invalida.");
             }
         } else {
             JOptionPane.showMessageDialog(this, "Debe llenar todos los campos.");
@@ -316,7 +364,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnRealizarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRealizarReservaActionPerformed
 
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:");
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:", JOptionPane.INFORMATION_MESSAGE);
         Cliente cliente = listaClientes.buscarCliente(cedula);
 
         if (cliente == null) {
@@ -324,7 +372,7 @@ public class GUI extends javax.swing.JFrame {
             return;
         }
 
-        int numSala = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese numero de sala:"));
+        int numSala = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese numero de sala:", JOptionPane.INFORMATION_MESSAGE));
         Sala sala = grafoSalas.buscarSala(numSala);
 
         if (sala == null) {
@@ -335,7 +383,7 @@ public class GUI extends javax.swing.JFrame {
         Pelicula pelicula = sala.getCartelera().pelicula;
         Reserva reserva = new Reserva(cliente, pelicula, sala, 6500); // precio fijo
 
-        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese numero de asiento:");
+        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese numero de asiento:", JOptionPane.INFORMATION_MESSAGE);
         int asientoNum = Integer.parseInt(asientoStr);
 
         Asiento asiento = sala.getAsientos().get(asientoNum - 1);
@@ -353,7 +401,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarClienteActionPerformed
 
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente a eliminar:");
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente a eliminar:", JOptionPane.INFORMATION_MESSAGE);
 
         if (cedula != null && !cedula.isEmpty()) {
             boolean eliminado = listaClientes.eliminarCliente(cedula);
@@ -370,7 +418,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnModificarPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarPeliculaActionPerformed
 
-        String tituloBuscado = JOptionPane.showInputDialog(this, "Ingrese el titulo de la pelicula a modificar:");
+        String tituloBuscado = JOptionPane.showInputDialog(this, "Ingrese el titulo de la pelicula a modificar:", JOptionPane.INFORMATION_MESSAGE);
 
         if (tituloBuscado == null || tituloBuscado.isEmpty()) {
             return;
@@ -379,15 +427,15 @@ public class GUI extends javax.swing.JFrame {
         Pelicula pelicula = cartelera.buscarPelicula(tituloBuscado);
 
         if (pelicula == null) {
-            JOptionPane.showMessageDialog(this, "Película no encontrada.");
+            JOptionPane.showMessageDialog(this, "Pelicula no encontrada.");
             return;
         }
 
         // Solicitar nuevos datos
-        String nuevoTitulo = JOptionPane.showInputDialog(this, "Nuevo titulo:", pelicula.getTitulo());
-        String nuevoGenero = JOptionPane.showInputDialog(this, "Nuevo genero:", pelicula.getGenero());
+        String nuevoTitulo = JOptionPane.showInputDialog(this, "Nuevo titulo:", pelicula.getTitulo(), JOptionPane.INFORMATION_MESSAGE);
+        String nuevoGenero = JOptionPane.showInputDialog(this, "Nuevo genero:", pelicula.getGenero(), JOptionPane.INFORMATION_MESSAGE);
         String nuevaDuracionStr = JOptionPane.showInputDialog(this, "Nueva duracion (min):", pelicula.getDuracion());
-        String nuevaClasificacion = JOptionPane.showInputDialog(this, "Nueva clasificacion:", pelicula.getClasificacion());
+        String nuevaClasificacion = JOptionPane.showInputDialog(this, "Nueva clasificacion:", pelicula.getClasificacion(), JOptionPane.INFORMATION_MESSAGE);
 
         try {
             int nuevaDuracion = Integer.parseInt(nuevaDuracionStr);
@@ -398,7 +446,7 @@ public class GUI extends javax.swing.JFrame {
             if (modificado) {
                 JOptionPane.showMessageDialog(this, "Pelicula modificada correctamente.");
             } else {
-                JOptionPane.showMessageDialog(this, "Error al modificar película.");
+                JOptionPane.showMessageDialog(this, "Error al modificar pelicula.");
             }
 
         } catch (NumberFormatException e) {
@@ -433,7 +481,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void btnProcesarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarVentaActionPerformed
 
-        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:");
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del cliente:", JOptionPane.INFORMATION_MESSAGE);
         Cliente cliente = listaClientes.buscarCliente(cedula);
 
         if (cliente == null) {
@@ -441,12 +489,12 @@ public class GUI extends javax.swing.JFrame {
             return;
         }
 
-        String[] opciones = {"1", "2"};
+        String[] opciones = {"1", "2", "3", "4"};
         int numSala = Integer.parseInt((String) JOptionPane.showInputDialog(this, "Seleccione una sala:", "Salas", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]));
         Sala sala = grafoSalas.buscarSala(numSala);
 
         Pelicula pelicula = sala.getCartelera().pelicula;
-        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese numero de asiento:");
+        String asientoStr = JOptionPane.showInputDialog(this, "Ingrese numero de asiento:", JOptionPane.INFORMATION_MESSAGE);
         int asientoNum = Integer.parseInt(asientoStr);
 
         Asiento asiento = sala.getAsientos().get(asientoNum - 1);
@@ -473,6 +521,16 @@ public class GUI extends javax.swing.JFrame {
         String lista = listaClientes.mostrarClientes(); // Llama al metodo de la clase
         JOptionPane.showMessageDialog(this, lista, "Lista de Clientes", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnMostrarClientesActionPerformed
+
+    private void btnVerMatrizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMatrizActionPerformed
+     String matrizTexto = grafoSalas.generarMatrizAdyacencia();
+    JOptionPane.showMessageDialog(this, matrizTexto, "Representacion Salas y Peliculas ", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_btnVerMatrizActionPerformed
+
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -520,13 +578,20 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton btnRealizarReserva;
     private javax.swing.JButton btnRegistrarCliente;
     private javax.swing.JButton btnVerCartelera;
+    private javax.swing.JButton btnVerMatriz;
     private javax.swing.JButton btnVerReservas;
     private javax.swing.JButton btnVerSalas;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JToolBar jToolBar3;
     private javax.swing.JToolBar jToolBar4;
+    private javax.swing.JToolBar jToolBar5;
     private javax.swing.JLabel lbTitulo;
     // End of variables declaration//GEN-END:variables
 }
